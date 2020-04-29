@@ -14,7 +14,7 @@ $("ul").on("click","span",function () {
 
 // add todo
 $("input[type='text']").on("keypress",function (event) {
-    if (event.which === 13) {
+    if (event.which === 13  && $(this).val() != "" ) {
         var newTodo = $(this).val();
         $("ul").append("<li><span><i class='fas fa-trash-alt'></i></span> " + newTodo + "</li>");
         $(this).val("");
